@@ -1,15 +1,12 @@
 #!/bin/bash
 
-#go to root
-cd ../../../
-
-cd C#/Renderer 
+cd C# 
 
 dotnet run 
 
-mv test.rbm ../../Classes/UH2021/DJGRAF/
+mv test.rbm ../
 
-cd ../../Classes/UH2021/DJGRAF
+cd ..
 
 python3 imageviewer.py test.rbm
 

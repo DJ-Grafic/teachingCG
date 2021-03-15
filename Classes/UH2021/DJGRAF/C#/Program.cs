@@ -1,6 +1,7 @@
 ﻿using System;
 using Rendering;
 using GMath;
+using System.Linq;
 
 namespace DJGraphic
 {
@@ -8,9 +9,12 @@ namespace DJGraphic
     {
         static void Main(string[] args)
         {
-            float3 a = new float3();
+            Raster render = new Raster(1024, 512);
             
-            Console.WriteLine("Hello World!");
+            PhotographicSet.Init(render);
+
+            render.RenderTarget.Save("test.rbm");
+            Console.WriteLine("Done.");
         }
     }
 }

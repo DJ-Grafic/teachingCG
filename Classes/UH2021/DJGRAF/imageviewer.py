@@ -11,7 +11,8 @@ def draw_image(fileName):
         image_data_float = struct.unpack('f'*(width*height*4), image_data_bytes)
         npimage = np.array(image_data_float).reshape((height, width, 4))[:,:,0:3]
         plt.imshow(npimage)
-        plt.savefig("dj_graphic.png")        
+        plt.savefig("dj_graphic.png")  
+        print("Draw..")      
 
 if __name__ == "__main__":
     fileName = sys.argv[1]
